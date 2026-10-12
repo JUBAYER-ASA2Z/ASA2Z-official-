@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A-S A2Z Quiz Event</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Hind Siliguri'}
+.gold-bg{background: radial-gradient(120% 120% at 0% 0%, #fff9db 0%, #ffffff 45%, #fffbeb 100%)}
+.gold-text{background:linear-gradient(90deg,#b45309,#facc15,#b45309);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.shadow-gold{box-shadow:0 15px 40px rgba(251,191,36,0.25)}
+@keyframes float {0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.float-anim{animation:float 2s ease-in-out infinite}
+</style>
+</head>
+<body class="gold-bg min-h-screen pb-[110px]">
+<div class="max-w-[520px] mx-auto min-h-screen flex flex-col p-4">
+
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-[12px] bg-zinc-900 text-yellow-400 flex items-center justify-center font-black text-[18px]">A</div>
+<div><p id="appName" class="font-black text-[13px]">A-S A2Z</p><p class="text-[9px] text-zinc-500 font-bold tracking-[2px]">QUIZ PLATFORM</p></div>
+</div>
+<div class="flex gap-2">
+<button onclick="setLang('bn')" id="bnBtn" class="px-5 py-2 rounded-full bg-zinc-900 text-white text-[11px] font-black">BN</button>
+<button onclick="setLang('en')" id="enBtn" class="px-5 py-2 rounded-full bg-white border text-zinc-500 text-[11px] font-black">EN</button>
+</div>
+</div>
+
+<div class="mt-6 rounded-[28px] bg-white border border-amber-100 shadow-gold p-[2px]">
+<div class="rounded-[26px] bg-white p-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span><span id="badge" class="text-[9px] font-black text-amber-700">LIVE EVENT ANNOUNCEMENT</span></div>
+<h1 id="mainTitle" class="mt-4 font-black text-[26px] leading-[30px]">আমাদের কুইজ ইভেন্ট<br><span class="gold-text">পরীক্ষামূলক শুরু</span></h1>
+<div class="mt-4 grid grid-cols-3 gap-2">
+<div class="bg-zinc-900 rounded-[14px] p-3 text-center"><p class="text-[8px] text-white/50 font-black">তারিখ</p><p id="d1v" class="text-white font-black text-[12px] mt-1">১৩ অক্টোবর<br>মঙ্গলবার</p></div>
+<div class="bg-amber-400 rounded-[14px] p-3 text-center"><p class="text-[8px] text-black/60 font-black">সময়</p><p id="timeVal" class="text-black font-black text-[12px] mt-1">রাত ৯:৩০</p></div>
+<div class="bg-white border rounded-[14px] p-3 text-center"><p class="text-[8px] text-zinc-400 font-black">এন্ট্রি</p><p class="text-zinc-900 font-black text-[12px] mt-1">সম্পূর্ণ<br>ফ্রি</p></div>
+</div>
+</div>
+</div>
+
+<div class="mt-5 bg-white rounded-[22px] p-5 border">
+<div id="content" class="text-[13px] leading-[22px] text-zinc-700 space-y-3"></div>
+<div class="mt-5 rounded-[16px] bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200 p-4 flex gap-3"><div class="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center font-black">💰</div><div><p id="goldTitle" class="font-black text-[13px]">গোল্ড জেতার সুযোগ</p><p id="goldDesc" class="text-[11px] text-zinc-600 mt-1">প্রতি সঠিক উত্তরে ১০০ Gold = ১০০ টাকা হাদিয়া।</p></div></div>
+<div class="mt-3 flex gap-2">
+<a href="app.apk" download class="flex-1 bg-zinc-900 text-white rounded-full py-3 text-center font-black text-[11px]">📲 <span id="btnApp">অ্যাপ ইন্সটল করুন</span></a>
+<a href="#" class="flex-1 bg-white border-2 border-zinc-900 rounded-full py-3 text-center font-black text-[11px]">🌐 <span id="btnSite">সাইট থেকে জয়েন</span></a>
+</div>
+<div class="mt-6 p-4 rounded-[16px] bg-amber-50 border"><p id="supportDesc" class="text-[11px] text-zinc-600 leading-[18px]">সব সময় আমাদের সাথে থাকবেন। আপনাদের সহযোগিতা আমাদের উৎসাহিত করবে। কোনো ত্রুটি পেলে দ্রুত জানাবেন।</p></div>
+<div class="mt-5 flex justify-center"><a href="https://wa.me/8801799069975" class="px-6 py-3 rounded-full bg-green-500 text-white font-black text-[12px]">💬 WhatsApp: +8801799069975</a></div>
+</div>
+
+<div class="mt-6 text-center pb-10">
+<p class="text-[9px] tracking-[5px] font-black text-zinc-400">DEVELOPED BY</p>
+<h2 class="mt-2 font-black text-[28px] leading-[28px] gold-text">POLAPAN TEAM</h2>
+<p class="font-black text-[12px]">Qari MD Jubayer Ahmed Siyam</p>
+</div>
+
+</div>
+
+<!-- APK FIXED - সবসময় ফিক্সড থাকবে, ক্রস আইকন নেই -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex justify-center p-3 pointer-events-none">
+<div class="pointer-events-auto w-full max-w-[520px] bg-zinc-900 rounded-[18px] p-3 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.4)] border border-amber-300/30 float-anim">
+<div class="flex items-center gap-3">
+<div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-amber-300 to-yellow-500 flex items-center justify-center text-[22px] font-black">📦</div>
+<div>
+<p id="apkName" class="font-black text-white text-[13px] leading-[13px]">A-S A2Z App.apk</p>
+<p id="apkSize" class="text-[10px] text-white/60 font-bold mt-1">v1.0 • 18 MB • Free Download</p>
+</div>
+</div>
+<a id="apkBtn" href="app.apk" download class="px-6 py-3 rounded-full bg-amber-400 text-black font-black text-[12px] active:scale-95">⬇ ডাউনলোড</a>
+</div>
+</div>
+
+<script>
+const data={
+bn:{
+badge:"লাইভ ইভেন্ট ঘোষণা",mainTitle:"আমাদের কুইজ ইভেন্ট<br><span class='gold-text'>পরীক্ষামূলক শুরু</span>",d1v:"১৩ অক্টোবর<br>মঙ্গলবার",timeVal:"রাত ৯:৩০",
+content:`<p>আসসালামু আলাইকুম। <b>আমাদের কুইজ ইভেন্ট পরীক্ষামূলকভাবে আগামী ১৩ই অক্টোবর রোজ মঙ্গলবার রাত ৯:৩০ মিনিটের সময় শুরু হবে।</b></p><p>প্রতি প্রশ্নের সঠিক উত্তরে <b class='text-amber-600'>১০০ Gold = ১০০ টাকা হাদিয়া।</b> Gold দিয়ে আইটেম কিনতে পারবেন ও ক্যাশ আউট করতে পারবেন।</p><p class='p-3 bg-zinc-900 text-white rounded-[12px] text-center font-black'>✅ ইভেন্ট ফ্রি - কোনো ফি নেই</p>`,
+goldTitle:"গোল্ড জেতার সুযোগ",goldDesc:"প্রতি সঠিক উত্তরে ১০০ Gold = ১০০ টাকা হাদিয়া।",
+btnApp:"অ্যাপ ইন্সটল করুন",btnSite:"সাইট থেকে জয়েন",supportDesc:"সব সময় আমাদের সাথে থাকবেন। আপনাদের সহযোগিতা আমাদের উৎসাহিত করবে। কোনো ত্রুটি পেলে দ্রুত জানাবেন।",
+apkName:"A-S A2Z App.apk",apkSize:"v1.0 • 18 MB • Free Download",apkBtn:"⬇ ডাউনলোড"
+},
+en:{
+badge:"LIVE EVENT ANNOUNCEMENT",mainTitle:"Our Quiz Event<br><span class='gold-text'>Beta Launch</span>",d1v:"13th Oct<br>Tuesday",timeVal:"9:30 PM",
+content:`<p>Assalamu Alaikum. <b>Our quiz event will start on 13th October Tuesday at 9:30 PM.</b></p><p>Win <b class='text-amber-600'>100 Gold = 100 Taka per correct answer.</b> Purchase items and cash out.</p><p class='p-3 bg-zinc-900 text-white rounded-[12px] text-center font-black'>✅ Totally Free - No Fee</p>`,
+goldTitle:"Win Gold",goldDesc:"100 Gold = 100 Taka per correct answer.",
+btnApp:"Install App",btnSite:"Join from Site",supportDesc:"Stay with us. Your support encourages us. Report any bug quickly.",
+apkName:"A-S A2Z App.apk",apkSize:"v1.0 • 18 MB • Free Download",apkBtn:"⬇ Download"
+}
+};
+function setLang(l){
+const d=data[l];
+document.getElementById('badge').innerText=d.badge;document.getElementById('mainTitle').innerHTML=d.mainTitle;
+document.getElementById('d1v').innerHTML=d.d1v;document.getElementById('timeVal').innerHTML=d.timeVal;
+document.getElementById('content').innerHTML=d.content;document.getElementById('goldTitle').innerText=d.goldTitle;
+document.getElementById('goldDesc').innerText=d.goldDesc;document.getElementById('btnApp').innerText=d.btnApp;
+document.getElementById('btnSite').innerText=d.btnSite;document.getElementById('supportDesc').innerText=d.supportDesc;
+document.getElementById('apkName').innerText=d.apkName;document.getElementById('apkSize').innerText=d.apkSize;
+document.getElementById('apkBtn').innerText=d.apkBtn;
+document.getElementById('bnBtn').className=l==='bn'?'px-5 py-2 rounded-full bg-zinc-900 text-white text-[11px] font-black':'px-5 py-2 rounded-full bg-white border text-zinc-500 text-[11px] font-black';
+document.getElementById('enBtn').className=l==='en'?'px-5 py-2 rounded-full bg-zinc-900 text-white text-[11px] font-black':'px-5 py-2 rounded-full bg-white border text-zinc-500 text-[11px] font-black';
+}
+setLang('bn');
+</script>
+</body>
+</html>
